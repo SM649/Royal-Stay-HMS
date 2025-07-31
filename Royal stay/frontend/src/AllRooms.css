@@ -1,0 +1,402 @@
+/* src/AllRooms.css */
+
+/* Custom override for the main content wrapper of AllRooms page */
+.rooms-content-wrapper {
+    /* Define ALL padding here now that 'p-4' is removed from JSX */
+    padding-top: 00px;
+    /* Reduced from 25px, adjust as needed */
+    padding-bottom: 25px;
+    /* Keep bottom padding consistent if desired */
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/* Consistent Section Styling (from Home.css/About.css/Contact.css) */
+.section-title2 {
+    font-size: 2.2rem; /* Slightly larger than AllRooms if desired for a single page title */
+    margin-bottom: 10px;
+    color: var(--dark-text-color);
+    position: relative;
+    display: inline-block;
+}
+
+.section-title2::after {
+    content: '';
+    display: block;
+    width: 70px; /* Adjust underline width */
+    height: 4px; /* Adjust underline thickness */
+    background-color: var(--primary-color);
+    margin: 8px 0 20px; /* Space below underline */
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    font-size: 1rem;
+    /* Decreased size from previous 1.1rem */
+    color: #666;
+    max-width: 800px;
+    margin-bottom: 20px;
+    /* Reduced margin from 30px */
+}
+
+/* Alert Styling */
+.room-alert {
+    margin-top: 20px;
+    border-radius: var(--border-radius-sm);
+    font-size: 1.05rem;
+    padding: 15px 20px;
+}
+
+/* Room Controls Card (Search/Filter/Add Button) */
+.room-controls-card {
+    background-color: var(--background-light);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 5px 15px var(--card-shadow);
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.room-controls-card .input-group-text {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius-sm) 0 0 var(--border-radius-sm);
+    padding: 10px 12px;
+}
+
+.room-controls-card .form-control,
+.room-controls-card .form-select {
+    border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px 15px;
+    font-size: 1rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.room-controls-card .form-control:focus,
+.room-controls-card .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(106, 142, 126, 0.25);
+    /* Primary color shadow */
+    outline: none;
+}
+
+.add-room-btn {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 10px 20px;
+    border-radius: 50px;
+    /* Pill shape */
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.add-room-btn:hover {
+    background-color: var(--button-hover-bg);
+    border-color: var(--button-hover-bg);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Custom Table Styling */
+.room-table-responsive {
+    background-color: var(--background-light);
+    /* Table background */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    /* Ensure rounded corners on children */
+}
+
+.custom-room-table {
+    width: 100%;
+    border-collapse: collapse;
+    /* Remove default table borders */
+    margin-bottom: 0;
+    /* Remove default margin */
+    font-size: 1rem;
+}
+
+.custom-room-table caption {
+    caption-side: top;
+    text-align: left;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+}
+
+.custom-room-table thead th {
+    background-color: var(--background-dark);
+    /* Dark header background */
+    color: var(--light-text-color);
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 2px solid var(--primary-color);
+    font-weight: 600;
+    cursor: pointer;
+    /* Indicate sortable columns */
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+    /* Prevent wrapping in headers */
+}
+
+.custom-room-table thead th:hover {
+    background-color: var(--background-dark-hover);
+    /* Slightly lighter dark on hover */
+}
+
+.custom-room-table thead th .svg-inline--fa {
+    margin-left: 8px;
+    /* Space for sort icons */
+    font-size: 0.9em;
+}
+
+.custom-room-table tbody tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    /* Light separator */
+    transition: background-color 0.3s ease;
+}
+
+.custom-room-table tbody tr:last-child {
+    border-bottom: none;
+    /* No border on last row */
+}
+
+.custom-room-table tbody tr:hover {
+    background-color: var(--background-hover-light);
+    /* Very light highlight on hover */
+}
+
+.custom-room-table tbody td {
+    padding: 12px 20px;
+    color: var(--dark-text-color);
+    vertical-align: middle;
+}
+
+/* Room Thumbnail Image */
+.room-thumbnail {
+    width: 80px;
+    /* Larger thumbnail */
+    height: 50px;
+    object-fit: cover;
+    border-radius: var(--border-radius-sm);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Availability Badges */
+.availability-badge {
+    padding: 6px 12px;
+    border-radius: 50px;
+    /* Pill shape */
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 90px;
+    /* Ensure consistent width */
+}
+
+.badge-available {
+    background-color: #28a745;
+    /* Green */
+    color: white;
+}
+
+.badge-booked {
+    background-color: #dc3545;
+    /* Red */
+    color: white;
+}
+
+/* Action Buttons */
+.action-btn {
+    border-radius: var(--border-radius-sm);
+    padding: 7px 10px;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    /* Fixed width for icon buttons */
+    height: 38px;
+}
+
+.action-btn .svg-inline--fa {
+    font-size: 1.1em;
+}
+
+/* Toggle Buttons specific colors */
+.btn-toggle-booked {
+    background-color: var(--primary-color);
+    /* To mark available */
+    border-color: var(--primary-color);
+    color: var(--light-text-color);
+}
+
+.btn-toggle-booked:hover {
+    background-color: var(--button-hover-bg);
+    border-color: var(--button-hover-bg);
+    color: var(--light-text-color);
+    transform: translateY(-1px);
+}
+
+.btn-toggle-available {
+    background-color: var(--secondary-color);
+    /* To mark booked */
+    border-color: var(--secondary-color);
+    color: var(--dark-text-color);
+    /* Dark text for light button */
+}
+
+.btn-toggle-available:hover {
+    background-color: var(--secondary-color-dark);
+    /* Darker secondary */
+    border-color: var(--secondary-color-dark);
+    color: var(--light-text-color);
+    transform: translateY(-1px);
+}
+
+.btn-danger {
+    /* Override default danger for delete button if needed */
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: white;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+    transform: translateY(-1px);
+}
+
+/* No Rooms Found Message */
+.no-rooms-found {
+    background-color: var(--background-light);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 5px 15px var(--card-shadow);
+    padding: 40px 20px;
+    color: #555;
+}
+
+.no-rooms-found .lead {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.no-rooms-found .btn-outline-primary {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.no-rooms-found .btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+}
+
+/* Other text styling for table cells */
+.room-no-badge {
+    font-weight: 700;
+    color: var(--dark-text-color);
+    font-size: 1.1em;
+}
+
+.room-type-text {
+    font-weight: 500;
+    color: var(--dark-text-color);
+}
+
+.room-price-text {
+    font-weight: 600;
+    color: var(--primary-color-dark);
+    /* Slightly darker primary for price */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .rooms-content-wrapper {
+        padding-top: 20px !important;
+        /* Adjust for smaller screens */
+        padding-bottom: 20px !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    .room-controls-card {
+        padding: 20px;
+    }
+
+    .room-controls-card .row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .room-controls-card .col-md-5,
+    .room-controls-card .col-md-3,
+    .room-controls-card .col-md-4 {
+        width: 100%;
+        margin-bottom: 15px;
+        /* Add space between stacked inputs */
+    }
+
+    .room-controls-card .text-md-end {
+        text-align: center !important;
+    }
+
+    .add-room-btn {
+        width: 100%;
+        /* Full width button on small screens */
+    }
+
+    .custom-room-table thead th {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+
+    .custom-room-table tbody td {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+
+    .room-thumbnail {
+        width: 60px;
+        height: 40px;
+    }
+
+    .availability-badge {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+        min-width: 70px;
+    }
+
+    .action-btn {
+        width: 32px;
+        height: 32px;
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 1.8rem;
+        /* Slightly smaller on very small screens */
+    }
+
+    .section-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .room-alert {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+}

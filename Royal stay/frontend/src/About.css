@@ -1,0 +1,207 @@
+/* src/About.css - About Page Specific Styling */
+
+/* About Hero Section */
+.about-hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('https://plus.unsplash.com/premium_photo-1661963123153-5471a95b7042?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    min-height: 70vh; /* Adjust height as needed */
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-hero-title {
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+    color: var(--light-text-color);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.about-hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--light-text-color);
+    opacity: 0.9;
+}
+
+/* General Section Wrapper for consistency with Home.css */
+.section-wrapper {
+    padding-top: 50px; /* Space above section title */
+    padding-bottom: 50px; /* Space below section subtitle */
+}
+
+.section-title {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    color: var(--dark-text-color);
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+/* Mission & Vision / Values Section Styling */
+.about-mission-vision, .about-values-team {
+    padding: 60px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* Subtle separator */
+}
+
+.about-heading {
+    font-size: 2.2rem;
+    color: var(--dark-text-color);
+    font-weight: 600;
+}
+
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 1.5rem;
+}
+
+.about-mission-vision img, .about-values-team img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Custom About Cards (for highlights section) */
+.custom-about-card {
+    background-color: var(--background-light);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 8px 20px var(--card-shadow);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    padding: 30px;
+}
+
+.custom-about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.custom-about-card .icon-large {
+    font-size: 4.5rem; /* Larger icon size */
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.1));
+}
+
+.custom-about-card .card-title {
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--dark-text-color);
+    margin-bottom: 15px;
+}
+
+.custom-about-card .card-text {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Responsive Adjustments for About Page */
+@media (max-width: 992px) {
+    .about-hero-title {
+        font-size: 3.5rem;
+    }
+    .about-hero-subtitle {
+        font-size: 1.3rem;
+    }
+    .section-title {
+        font-size: 2.2rem;
+    }
+    .about-heading {
+        font-size: 1.8rem;
+    }
+    .about-text {
+        font-size: 1rem;
+    }
+    .custom-about-card {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero-section {
+        min-height: 50vh;
+        padding: 80px 0;
+    }
+    .about-hero-title {
+        font-size: 2.8rem;
+    }
+    .about-hero-subtitle {
+        font-size: 1.1rem;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    .about-mission-vision, .about-values-team {
+        padding: 40px 0;
+    }
+    .about-heading {
+        font-size: 1.6rem;
+    }
+    .custom-about-card .icon-large {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-hero-title {
+        font-size: 2.2rem;
+    }
+    .about-hero-subtitle {
+        font-size: 0.9rem;
+    }
+}
+
+.icon-themed-dark {
+    color: var(--background-dark) !important; /* !important to override Bootstrap utilities */
+}
+
+/* Custom About Cards (for highlights section) */
+.custom-about-card {
+    background-color: var(--background-light);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 8px 20px var(--card-shadow);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    padding: 30px;
+}
+
+.custom-about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.custom-about-card .icon-large {
+    font-size: 4.5rem; /* Larger icon size */
+    margin-bottom: 20px;
+    /* Color is now handled by .icon-themed-dark class directly */
+    /* color: var(--primary-color); <--- REMOVE OR COMMENT OUT THIS LINE */
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.1));
+}

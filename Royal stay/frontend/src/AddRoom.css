@@ -1,0 +1,158 @@
+/* src/AddRoom.css */
+
+/* Consistent layout wrapper padding (similar to rooms-content-wrapper but specific to AddRoom) */
+.add-room-content-wrapper {
+    padding-top: 25px; /* Adjust this value to control space below Navbar */
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: var(--page-background); /* Ensure consistent background */
+}
+
+/* Reusing section-title and section-subtitle styles for consistency */
+.section-title2 {
+    font-size: 2.2rem; /* Slightly larger than AllRooms if desired for a single page title */
+    margin-bottom: 10px;
+    color: var(--dark-text-color);
+    position: relative;
+    display: inline-block;
+}
+
+.section-title2::after {
+    content: '';
+    display: block;
+    width: 70px; /* Adjust underline width */
+    height: 4px; /* Adjust underline thickness */
+    background-color: var(--primary-color);
+    margin: 8px 0 20px; /* Space below underline */
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin-bottom: 30px; /* More space before the form card */
+}
+
+/* Styling for the form card */
+.add-room-form-card {
+    background-color: var(--background-light); /* White background for the card */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: var(--border-radius-lg); /* Rounded corners for the card */
+    box-shadow: 0 5px 15px var(--card-shadow); /* Soft shadow */
+    max-width: 700px; /* Limit width for better readability */
+    margin: 0 auto; /* Center the form card */
+    padding: 30px; /* Generous internal padding */
+}
+
+/* Form labels */
+.add-room-form-card .form-label {
+    font-weight: 600;
+    color: var(--dark-text-color);
+    margin-bottom: 8px; /* Space below label */
+}
+
+/* Form input fields and select */
+.add-room-form-card .form-control,
+.add-room-form-card .form-select {
+    border: 1px solid #ced4da; /* Default Bootstrap border color */
+    border-radius: var(--border-radius-sm);
+    padding: 10px 15px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.add-room-form-card .form-control:focus,
+.add-room-form-card .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(106, 142, 126, 0.25); /* Primary color shadow */
+    outline: none;
+}
+
+/* Image input specific styling if needed */
+/* .add-room-submit-btn input[type="file"] {
+    
+} */
+
+/* Image preview styling */
+.image-preview {
+    border: 1px dashed #ced4da;
+    padding: 15px;
+    border-radius: var(--border-radius-sm);
+    background-color: #f8f9fa;
+}
+
+.image-preview img {
+    border-radius: var(--border-radius-sm);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Submit button styling */
+.add-room-submit-btn {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 12px 25px;
+    border-radius: 50px; /* Pill shape */
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    width: 100%; /* Full width button */
+    margin-top: 15px; /* Space above button */
+}
+
+.add-room-submit-btn:hover {
+    background-color: var(--button-hover-bg);
+    border-color: var(--button-hover-bg);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Alert Styling (reusing from AllRooms.css) */
+.room-alert {
+    margin-top: 20px;
+    border-radius: var(--border-radius-sm);
+    font-size: 1.05rem;
+    padding: 15px 20px;
+    max-width: 700px; /* Match form card width */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px; /* Space before form card */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .add-room-content-wrapper {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    .add-room-form-card {
+        padding: 20px;
+    }
+    .add-room-submit-btn {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .section-subtitle {
+        font-size: 0.9rem;
+    }
+    .room-alert {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+}

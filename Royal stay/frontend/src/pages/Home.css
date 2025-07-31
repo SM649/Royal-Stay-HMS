@@ -1,0 +1,282 @@
+/* src/Home.css - Home Page Specific Styles */
+
+/* H1-P styling is now in Global.css.
+   Removed :root variables as they are in Global.css */
+
+/* ========== Home Page Specific Typography & Section Titles ========== */
+/* These rules refine the general ones from Global.css for specific sections on Home.js */
+
+h1, h2, h3, h4, h5, h6 {
+  /* These should inherit font-family from Global.css unless overridden */
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1.2rem;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  padding-top: 80px;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary-color); /* Uses global variable */
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #777; /* Specific to this section */
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+
+/* ========== Hero Section ========== */
+.hero-section {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://plus.unsplash.com/premium_photo-1661964071015-d97428970584?q=80&w=1020&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+  padding: 150px 0;
+  color: var(--light-text-color);
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-title {
+  font-size: 4.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  color: var(--light-text-color);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.hero-subtitle {
+  font-size: 1.4rem;
+  margin-bottom: 2.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--light-text-color);
+  opacity: 0.9;
+}
+
+.hero-section .btn.primary-btn {
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+  font-size: 1.2rem;
+  padding: 15px 35px;
+  border-radius: 50px;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.4s ease;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.hero-section .btn.primary-btn:hover {
+  background-color: var(--button-hover-bg);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ========== Features Section ========== */
+.features-section {
+  background-color: var(--background-light);
+  padding: 100px 0;
+}
+
+.custom-card {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: var(--border-radius-lg);
+  box-shadow: 0 8px 20px var(--card-shadow);
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.3s ease;
+  overflow: hidden;
+  height: 100%;
+}
+
+.custom-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+}
+
+.custom-card .card-body {
+  padding: 30px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.custom-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.1));
+}
+
+.custom-card .card-title {
+  color: var(--dark-text-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.custom-card .card-text {
+  color: #555;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* ========== Call to Action Section ========== */
+.cta-section {
+  background-color: var(--secondary-color);
+  padding: 80px 0;
+  color: var(--dark-text-color);
+}
+
+.cta-title {
+  font-size: 3rem;
+  margin-bottom: 1.2rem;
+  color: var(--dark-text-color);
+}
+
+.cta-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+  color: #555;
+}
+
+.cta-section .btn {
+  border-radius: 50px;
+  padding: 14px 30px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cta-section .btn.dark-btn {
+  background-color: var(--primary-color);
+  color: var(--light-text-color);
+  border: 2px solid var(--primary-color);
+}
+
+.cta-section .btn.dark-btn:hover {
+  background-color: var(--button-hover-bg);
+  border-color: var(--button-hover-bg);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.cta-section .btn.outline-dark-btn {
+  background-color: transparent;
+  color: var(--dark-text-color);
+  border: 2px solid var(--dark-text-color);
+}
+
+.cta-section .btn.outline-dark-btn:hover {
+  background-color: var(--dark-text-color);
+  color: var(--light-text-color);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ========== HOME PAGE Responsive Styling ========== */
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .cta-title {
+    font-size: 2.5rem;
+  }
+  .custom-card {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 100px 0;
+  }
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  .section-title {
+    font-size: 1.8rem;
+  }
+  .section-subtitle {
+    font-size: 1rem;
+  }
+  .cta-title {
+    font-size: 2rem;
+  }
+  .cta-subtitle {
+    font-size: 1rem;
+  }
+  .custom-card .card-title {
+    font-size: 1.3rem;
+  }
+  .custom-card img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+  .cta-title {
+    font-size: 1.8rem;
+  }
+  .cta-section .btn {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+  .cta-section .d-flex {
+    flex-direction: column; /* Stack buttons vertically on very small screens */
+    gap: 15px !important;
+  }
+}

@@ -1,0 +1,141 @@
+/* src/AdminLogin.css */
+
+/* The main centering is now handled by .login-content-area
+   Remove the previous centering styles from .admin-login-page
+   or remove the .admin-login-page class entirely from the JSX.
+   For now, I'll update the class name in JSX and assume this CSS is for the card specific.
+   Let's create a new class for the centering container:
+*/
+
+.login-content-area {
+    /* These styles will center the card within the main content area */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--page-background); /* Ensure consistent background for this area */
+    padding: 25px; /* Add padding to match other content areas */
+}
+
+
+/* Custom card for the login form */
+.admin-login-card {
+    background-color: var(--background-light); /* White background for the card */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: var(--border-radius-lg); /* Rounded corners */
+    box-shadow: 0 10px 25px var(--card-shadow); /* Stronger shadow for prominent card */
+    max-width: 450px; /* Max width for the login form */
+    width: 100%; /* Ensure it takes full width up to max-width */
+    padding: 40px; /* Generous internal padding */
+}
+
+/* Reusing section-title and section-subtitle styles for consistency */
+.section-title {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: var(--dark-text-color);
+    position: relative;
+    display: inline-block;
+    width: 100%; /* Make it take full width for centering text */
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 70px; /* Underline for the title */
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 8px auto 0; /* Center the underline */
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 90%; /* Adjust max-width for better centering in card */
+    margin: 0 auto 30px auto; /* Center subtitle and add bottom margin */
+}
+
+/* Form labels */
+.admin-login-card .form-label {
+    font-weight: 600;
+    color: var(--dark-text-color);
+    margin-bottom: 8px;
+}
+
+/* Form input fields */
+.admin-login-card .form-control {
+    border: 1px solid #ced4da;
+    border-radius: var(--border-radius-sm);
+    padding: 12px 15px; /* Slightly more padding */
+    font-size: 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-login-card .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(106, 142, 126, 0.25); /* Primary color shadow */
+    outline: none;
+}
+
+/* Login button styling */
+.login-submit-btn {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 12px 25px;
+    border-radius: 50px; /* Pill shape */
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.login-submit-btn:hover {
+    background-color: var(--button-hover-bg);
+    border-color: var(--button-hover-bg);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Register link styling */
+.register-link {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.register-link:hover {
+    color: var(--button-hover-bg);
+    text-decoration: underline;
+}
+
+/* Alert Styling for login messages */
+.login-alert {
+    margin-bottom: 25px;
+    border-radius: var(--border-radius-sm);
+    font-size: 0.95rem;
+    padding: 12px 20px;
+    text-align: left; /* Align text left within alert */
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .admin-login-card {
+        padding: 25px;
+        margin: 0 15px; /* Add horizontal margin on very small screens */
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .section-subtitle {
+        font-size: 0.9rem;
+    }
+    .login-submit-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+    .login-alert {
+        font-size: 0.85rem;
+        padding: 10px 15px;
+    }
+}

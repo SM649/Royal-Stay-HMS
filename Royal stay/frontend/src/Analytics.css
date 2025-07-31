@@ -1,0 +1,171 @@
+/* src/Analytics.css */
+
+/* Consistent layout wrapper padding */
+.analytics-content-wrapper {
+    padding-top: 25px; /* Adjust this value to control space below Navbar */
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: var(--page-background); /* Ensure consistent background */
+}
+
+/* Reusing section-title and section-subtitle styles for consistency */
+.section-title2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: var(--dark-text-color);
+    position: relative;
+    display: inline-block;
+}
+
+.section-title2::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 8px 0 20px;
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin-bottom: 30px; /* Space before analytics cards */
+}
+
+/* Analytics Cards Styling */
+.analytics-card {
+    background-color: var(--background-light); /* Default background for all cards */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: var(--border-radius-lg); /* Rounded corners */
+    box-shadow: 0 5px 15px var(--card-shadow); /* Soft shadow */
+    color: var(--dark-text-color); /* Default text color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.analytics-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.analytics-card .card-body {
+    padding: 25px;
+}
+
+.analytics-card .card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.analytics-card .card-text {
+    font-weight: 700;
+    line-height: 1; /* Ensure tight line-height for large numbers */
+}
+
+/* Specific card colors and icon styling */
+.total-rooms-card {
+    background: linear-gradient(135deg, var(--primary-color), var(--button-hover-bg));
+    color: white; /* White text for gradient background */
+}
+.total-rooms-card .card-title {
+    color: rgba(255, 255, 255, 0.85); /* Lighter title */
+}
+
+.booked-rooms-card {
+    background: linear-gradient(135deg, #dc3545, #e4606d); /* Danger red gradient */
+    color: white;
+}
+.booked-rooms-card .card-title {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.available-rooms-card {
+    background: linear-gradient(135deg, #28a745, #4ad269); /* Success green gradient */
+    color: white;
+}
+.available-rooms-card .card-title {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.analytics-card .card-icon-wrapper {
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white background for icon */
+    border-radius: 50%; /* Circular shape */
+    padding: 15px;
+    width: 60px; /* Fixed size */
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px; /* Space from text */
+}
+
+.analytics-card .card-icon {
+    font-size: 2.2rem; /* Size of the icon */
+    color: rgba(255, 255, 255, 0.9); /* Slightly transparent white for icon */
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) { /* Medium screens, e.g., tablets */
+    .section-title {
+        font-size: 2rem;
+    }
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    .analytics-card .card-body {
+        padding: 20px;
+    }
+    .analytics-card .card-title {
+        font-size: 1.1rem;
+    }
+    .analytics-card .card-text {
+        font-size: 2.5rem; /* Adjust display-4 size */
+    }
+    .analytics-card .card-icon-wrapper {
+        width: 50px;
+        height: 50px;
+        padding: 12px;
+    }
+    .analytics-card .card-icon {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) { /* Small screens */
+    .analytics-content-wrapper {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .analytics-card {
+        margin-bottom: 20px; /* Add space between stacked cards */
+    }
+    .analytics-card .card-text {
+        font-size: 2.2rem;
+    }
+    .analytics-card .card-icon-wrapper {
+        width: 45px;
+        height: 45px;
+        padding: 10px;
+    }
+    .analytics-card .card-icon {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 576px) { /* Extra small screens */
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .section-subtitle {
+        font-size: 0.9rem;
+    }
+    .analytics-card .card-text {
+        font-size: 2rem;
+    }
+}

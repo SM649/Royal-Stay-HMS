@@ -1,0 +1,295 @@
+/* src/Bookings.css */
+
+/* Consistent layout wrapper padding (similar to AllRooms and AddRoom) */
+.bookings-content-wrapper {
+    padding-top: 25px; /* Adjust this value to control space below Navbar */
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: var(--page-background); /* Ensure consistent background */
+}
+
+/* Reusing section-title and section-subtitle styles for consistency */
+.section-title2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: var(--dark-text-color);
+    position: relative;
+    display: inline-block;
+}
+
+.section-title2::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 8px 0 20px;
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 800px;
+    margin-bottom: 30px; /* Space before filter card */
+}
+
+/* Booking Filters Card (similar to room-controls-card in AllRooms) */
+.booking-filters-card {
+    background-color: var(--background-light);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 5px 15px var(--card-shadow);
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.booking-filters-card .input-group-text {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius-sm) 0 0 var(--border-radius-sm);
+    padding: 10px 12px;
+}
+
+.booking-filters-card .form-control,
+.booking-filters-card .form-select {
+    border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 10px 15px;
+    font-size: 1rem;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.booking-filters-card .form-control:focus,
+.booking-filters-card .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(106, 142, 126, 0.25); /* Primary color shadow */
+    outline: none;
+}
+
+/* Custom Table Styling (similar to custom-room-table in AllRooms) */
+.booking-table-responsive {
+    background-color: var(--background-light);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+}
+
+.custom-booking-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 0;
+    font-size: 1rem;
+}
+
+.custom-booking-table caption {
+    caption-side: top;
+    text-align: left;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #555;
+}
+
+.custom-booking-table thead th {
+    background-color: var(--background-dark);
+    color: var(--light-text-color);
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 2px solid var(--primary-color);
+    font-weight: 600;
+    white-space: nowrap; /* Prevent wrapping in headers */
+}
+
+.custom-booking-table tbody tr {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    transition: background-color 0.3s ease;
+}
+
+.custom-booking-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.custom-booking-table tbody tr:hover {
+    background-color: var(--background-hover-light);
+}
+
+.custom-booking-table tbody td {
+    padding: 12px 20px;
+    color: var(--dark-text-color);
+    vertical-align: middle;
+}
+
+/* Status Badges */
+.booking-status-badge {
+    padding: 6px 12px;
+    border-radius: 50px; /* Pill shape */
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 90px; /* Ensure consistent width */
+}
+
+.badge-pending {
+    background-color: #ffc107; /* Warning yellow */
+    color: #343a40; /* Dark text for light background */
+}
+
+.badge-confirmed {
+    background-color: #28a745; /* Success green */
+    color: white;
+}
+
+/* Action Buttons (Confirm/Delete) */
+.action-btn {
+    border-radius: var(--border-radius-sm);
+    padding: 7px 10px;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px; /* Fixed width for icon buttons */
+    height: 38px;
+}
+
+.action-btn .svg-inline--fa {
+    font-size: 1.1em;
+}
+
+.btn-confirm-booking {
+    background-color: #28a745; /* Success green */
+    border-color: #28a745;
+    color: white;
+}
+.btn-confirm-booking:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+    transform: translateY(-1px);
+}
+
+.btn-delete-booking {
+    background-color: #dc3545; /* Danger red */
+    border-color: #dc3545;
+    color: white;
+}
+.btn-delete-booking:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+    transform: translateY(-1px);
+}
+
+/* No Bookings Found Message */
+.no-bookings-found {
+    background-color: var(--background-light);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 5px 15px var(--card-shadow);
+    padding: 40px 20px;
+    color: #555;
+}
+.no-bookings-found .lead {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.no-bookings-found .text-muted {
+    font-size: 1rem;
+}
+
+/* Other text styling for table cells */
+.booking-user-text,
+.booking-cnic-text,
+.booking-phone-text,
+.booking-room-text {
+    font-weight: 500;
+    color: var(--dark-text-color);
+}
+
+/* Alert Styling (reusing from AllRooms.css) */
+.room-alert {
+    margin-top: 20px;
+    border-radius: var(--border-radius-sm);
+    font-size: 1.05rem;
+    padding: 15px 20px;
+    max-width: 900px; /* Adjust width as needed for this page */
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) { /* Adjust for medium screens, e.g., tablets */
+    .section-title {
+        font-size: 2rem;
+    }
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    .booking-filters-card {
+        padding: 20px;
+    }
+    .booking-filters-card .col-md-6,
+    .booking-filters-card .col-md-4 {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .booking-filters-card .input-group:last-child {
+        margin-bottom: 0;
+    }
+    .custom-booking-table thead th,
+    .custom-booking-table tbody td {
+        font-size: 0.9rem;
+        padding: 10px 12px;
+    }
+    .booking-status-badge {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+        min-width: 70px;
+    }
+    .action-btn {
+        width: 32px;
+        height: 32px;
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .bookings-content-wrapper {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .booking-filters-card .row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .booking-filters-card .input-group {
+        margin-bottom: 15px; /* space between stacked inputs */
+    }
+    .booking-filters-card .input-group:last-child {
+        margin-bottom: 0;
+    }
+    .table-responsive { /* Ensure table scrolls on small screens */
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .section-subtitle {
+        font-size: 0.9rem;
+    }
+    .room-alert {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+}
